@@ -1,0 +1,56 @@
+package commands;
+
+import java.nio.file.*;
+
+public class LogCommand {
+
+    public static void run() throws Exception {
+
+        Path headPath = Path.of(".gitkev/refs/main");
+
+        if (!Files.exists(headPath)) {
+            System.out.println("No commits yet.");
+            return;
+        }
+
+        String hash = Files.readString(headPath).trim();
+
+        while (!hash.isEmpty()) {
+
+            Path commitPath = Path.of(
+                ".gitkev/objects",
+                hash.substring(0, 2),
+                hash.substring(2)
+            );
+
+            String commitData = Files.readString(commitPath);
+
+            String message = "";
+            String parent = "";
+
+            for (String line : commitData.split("\n")) {
+                if (line.startsWith("message:")) {
+                    message = line.substring(8);
+                }
+                if (line.startsWith("parent:")) {
+                    parent = line.substring(7);
+                }
+            }
+
+            System.out.println("Commit: " + hash);
+            System.out.println("Message: " + message);
+
+            if (!parent.isEmpty()) {
+                System.out.println("Parent: " + parent);
+            }
+
+            System.out.println();
+
+            if (parent.isEmpty()) {
+                break; // reached first commit
+            }
+
+            hash = parent;
+        }
+    }
+}
