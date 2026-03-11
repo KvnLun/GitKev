@@ -1,6 +1,4 @@
 import commands.AddCommand;
-import commands.CheckoutCommand;
-import commands.HashObjectCommand;
 import commands.InitCommand;
 
 public class App {
@@ -23,7 +21,7 @@ public class App {
                     System.out.println("Please provide a file to add.");
                     return;
                 }
-                HashObjectCommand.run(args[1]);
+                //HashObjectCommand.run(args[1]);
                 AddCommand.run(args[1]);
                 break;
             case "commit":
