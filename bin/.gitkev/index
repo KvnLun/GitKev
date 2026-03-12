@@ -1,0 +1,13 @@
+0ff8b064d9005366106eeb9f302c377c2ef3640e C:\Users\kevin\OneDrive\Desktop\GitKev\GitKev\src\.gitignore
+8b9f30281af36ed23c03856169e1bab6d75e3954 C:\Users\kevin\OneDrive\Desktop\GitKev\GitKev\src\App.java
+0b5341098d3dd6c28d129158acc9a8b312498ebc C:\Users\kevin\OneDrive\Desktop\GitKev\GitKev\src\commands\AddCommand.java
+f809812febf212c2cfaf4eec9fda29afb3d834d3 C:\Users\kevin\OneDrive\Desktop\GitKev\GitKev\src\commands\CheckoutCommand.java
+968c8a44866e33a28da1d6755602f60499f53677 C:\Users\kevin\OneDrive\Desktop\GitKev\GitKev\src\commands\CommitCommand.java
+9124bc26c56f7eb25e379dde9f8115807d0de839 C:\Users\kevin\OneDrive\Desktop\GitKev\GitKev\src\commands\HashObjectCommand.java
+053b531a5f995d8a3818699e7900f89fb870e117 C:\Users\kevin\OneDrive\Desktop\GitKev\GitKev\src\commands\InitCommand.java
+c5a6e5aeac1981adb17eb40889f4c45905e480d7 C:\Users\kevin\OneDrive\Desktop\GitKev\GitKev\src\commands\LogCommand.java
+c8d65c5c2ac633d22b20a41b83c152634b5af1cf C:\Users\kevin\OneDrive\Desktop\GitKev\GitKev\src\commands\StatusCommand.java
+0a5ab2332698aa556e8eccf4d206fc231e94b8e1 C:\Users\kevin\OneDrive\Desktop\GitKev\GitKev\src\objects\Commit.java
+6e4d6fafd96d053d11e6047cec5102916f446f6f C:\Users\kevin\OneDrive\Desktop\GitKev\GitKev\src\storage\Hasher.java
+a54e72f17810a89a9b68904a13587e3b91780245 C:\Users\kevin\OneDrive\Desktop\GitKev\GitKev\src\storage\ObjectStore.java
+f53fea5ae82c80f9792ef08eded2b006e4688c4e C:\Users\kevin\OneDrive\Desktop\GitKev\GitKev\src\test1.txt
