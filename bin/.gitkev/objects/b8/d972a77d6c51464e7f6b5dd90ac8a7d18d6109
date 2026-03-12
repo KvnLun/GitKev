@@ -39,6 +39,21 @@ public class LogCommand {
 
             System.out.println("Commit: " + hash);
             System.out.println("Message: " + message);
+            System.out.println("Date:    " + Files.getLastModifiedTime(commitPath));
+            System.out.println("Files:");
+            System.out.println("=".repeat(100));
+            for (String line : commitData.split("\n")) {
+                if (line.startsWith("files:")) {
+                    continue;
+                }
+                if (line.contains(" ")) {
+                    String[] parts = line.split(" ", 2);
+                    if (parts.length == 2) {
+                        System.out.println("  " + parts[1]);
+                    }
+                }
+            }
+            System.out.println("=".repeat(100));
 
             if (!parent.isEmpty()) {
                 System.out.println("Parent: " + parent);

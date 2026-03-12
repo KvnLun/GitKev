@@ -20,15 +20,16 @@ public class StatusCommand {
         }
 
         System.out.println("Tracked Uncommited files:");
-        System.out.println("-".repeat(60));
-        System.out.println("-".repeat(60));
+        System.out.println("=".repeat(120));
+        System.out.println("Hash                                       |  Path");
+        System.out.println("-".repeat(120));
         for (String line : lines) {
             String[] parts = line.split(" ", 2);
             if (parts.length == 2) {
-                System.out.printf("%-42s %s%n", parts[0], parts[1]);
+                System.out.printf("%-42s | %s%n", parts[0], parts[1]);
             }
         }
-        System.out.println("-".repeat(60));
+        System.out.println("=".repeat(120));
         System.out.println(lines.size() + " file(s) tracked.");
     }
 }

@@ -44,6 +44,13 @@ public class App {
             case "status":
                 commands.StatusCommand.run();
                 break;
+            case "status-detail":
+                if (args.length < 2) {
+                    System.out.println("Provide commit hash to show details");
+                    return;
+                }
+                commands.LogDetailCommand.run(args[1]);
+                break;
             default:
                 System.out.println("Unknown command");
         }

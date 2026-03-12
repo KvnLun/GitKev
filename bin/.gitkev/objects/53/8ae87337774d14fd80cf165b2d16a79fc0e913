@@ -14,9 +14,7 @@ public class LogCommand {
         }
 
         String hash = Files.readString(headPath).trim();
-        System.out.println("=".repeat(100));
-        System.out.println("My Gitkev Commit Log");
-        System.out.println("=".repeat(100));
+
         while (!hash.isEmpty()) {
 
             Path commitPath = Path.of(
@@ -42,7 +40,6 @@ public class LogCommand {
             System.out.println("Commit: " + hash);
             System.out.println("Message: " + message);
             System.out.println("Date:    " + Files.getLastModifiedTime(commitPath));
-            System.err.println("-".repeat(100));
             
 
             if (!parent.isEmpty()) {
