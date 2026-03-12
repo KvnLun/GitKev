@@ -51,6 +51,18 @@ public class App {
                 }
                 commands.LogDetailCommand.run(args[1]);
                 break;
+            case "help":
+                System.out.println("Available commands:");
+                System.out.println("=".repeat(120));
+                System.out.println("init - Initialize a new repository");
+                System.out.println("add <file> - Add a file to the staging area");
+                System.out.println("commit <message> - Commit staged changes with a message");
+                System.out.println("log - Show commit history");
+                System.out.println("checkout <commitHash> - Checkout a specific commit");
+                System.out.println("status - Show the status of the repository");
+                System.out.println("status-detail <commitHash> - Show details of a specific commit");
+                System.out.println("=".repeat(120));
+                break;
             default:
                 System.out.println("Unknown command");
         }
